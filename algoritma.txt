@@ -1,0 +1,15 @@
+@dimsystudio
+
+algoritma disini
+
+    1.Tampilan awal klik balon/kue (Opsi lain pun jadi).
+    2.Muncul pop up masukin nama.
+    3.Muncul pop up pilihan jenis kelamin
+    4.Jika laki laki:
+        pop up "Selamat ulang tahun (nama), semoga sehat selalu, panjang umur, dan dilimpahkan rezekinya.
+        aku punya saran, jangan dulu mikirin cinta cintaan, fokus dulu sama tujuan kamu, kamu sadar ga kalo orang tua kamu
+        menaruh banyak harapan ke kamu?, perjalananmu masih panjang. Semangat terus ya bro🎈"
+        >tombol balas pesan
+    5.Jika Perempuan:
+        pop up "Selamat ulang tahun (nama), semoga sehat selalu, panjang umur, dan dilimpahkan rezekinya.
+        aku punya saran, jangan terlalu deket sama cowo ya, kamu harus jaga diri. Semangat terus ya🎈

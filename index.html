@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haiiii</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-xR1z+iRMt9OMn4hC+al5JO4Mt4TMtnb67ADgxC7wK9C0Jv0B5m1THz7egsMFv+Aa" crossorigin="anonymous">
+</head>
+<body>
+   <!-- AWAL -->
+    <div class="wrapper1" id="wrapper1">
+        <button id="kado" style="border: none; background: none; padding: 0">
+          <div class="btn-play">
+            <img src="asset/img/kado.jpg" width="100%">
+          </div>
+        </button>
+        <br/>
+      </div>
+      <div class="elm-surat" id="klikkado">
+        <h2 class="surat"><b>Klik kadonya</b></h2>
+      </div>
+ 
+   <!-- POPUP PERTAMA -->
+      <div id="popup1" class="popup1">
+        <h2 class="halo">Cie yang lagi ultah, isi data nya dulu dong</h2>
+        <form>
+          <input type="text" id="nama" maxlength="10" class="teksnama" placeholder="Masukan nama kamu disini" required/>
+          <center>
+            <h2 class="halo2">Pilih gender(wajib)</h2>
+
+          <div class="jekel">
+            <label>
+              <input type="radio" name="jk" id="jkPria" value="pria">
+              <img src="asset/img/cowo.jpg" width="100px">
+            </label>
+            <label>
+              <input type="radio" name="jk" id="jkWanita" value="wanita">
+              <img src="asset/img/cewe.jpg" width="100px">
+            </label>
+          </div>
+          <input type="submit" value="Lanjut" class="lanjut-pop1" id="lanjutpopup1"/>
+        </center>
+        </form>
+      </div>
+
+      <!-- POP UP 2 LK-->
+      <div class="popup2lk" id="popup2lk">
+        <p class="ketik" id="ketiklk"></p>
+        <div class="div-wa" id="div-wa">
+          <button class="lanjut" id="lanjutkan" onclick="lanjut_wa();">Balas</button>
+        </div>
+      </div>
+
+      <!-- POP UP 2 CW -->
+      <div class="popup2cw" id="popup2cw">
+        <p class="ketik" id="ketikcw"></p>
+        <div class="div-wa" id="tmbllwa">
+          <button class="lanjut" id="lanjutkancw" onclick="lanjur_wa();">Balas</button>
+        </div>
+      </div>
+
+
+      <!-- JS DISINI -->
+      <script>
+        //INI FUNGSI AUDIO
+        var audio = new Audio("asset/mp3/musikbegron.mp3");
+
+        function playDj() {
+          console.log("Musik diputer");
+          audio.play();
+        };
+
+        //FUNGSI ID UMUM
+        var popwrap = document.getElementById("wrapper1");
+        var btn = document.getElementById("kado");
+        var textwrap = document.getElementById("klikkado");
+        var pop1 = document.getElementById("popup1");
+        var pop2lk = document.getElementById("popup2lk");
+        var pop2cw = document.getElementById("popup2cw");
+        var btnpop1 = document.getElementById("lanjutpopup1");
+        var ketiklaki = document.getElementById("ketiklk");
+        var ketikcw = document.getElementById("ketikcw");
+        var btnlanjutlk = document.getElementById("div-wa");
+        var btnlanjutcw = document.getElementById("tmbllwa");
+        var i = 0;
+        var j = 0;
+        var speed = 70;
+
+        //INI FUNGSI KLIK KADO
+        btn.addEventListener("click", function() {
+          popwrap.style.display = "none";
+          textwrap.style.display = "none";
+          pop1.style.display = "block";
+          //Play musik
+          playDj();
+        });
+
+        //INI FUNGSI KONDISI
+        function kondisi(){
+
+
+        var jkPria = document.getElementById("jkPria");
+        var jkWanita = document.getElementById("jkWanita");
+
+        if (jkPria.checked) {
+            pop2lk.style.display = "block";
+            ketikkklk();
+
+        } else if (jkWanita.checked) {
+            pop2cw.style.display = "block";
+            ketikkkcw();
+
+        } else {
+            alert('Wajib mengisi data');
+            window.location.href = "index.html";
+
+          }
+        };
+
+        btnpop1.addEventListener("click", function(){
+
+          event.preventDefault();
+          pop1.style.display = "none";
+          kondisi();
+
+        });
+
+        // FUNGSI UNTUK LK
+        function ketikkklk() {
+          var nama = document.getElementById("nama").value;
+          var txt = `Selamat ulang tahun `+ nama +` , semoga sehat selalu, panjang umur, dan dilimpahkan rezekinya.
+          aku punya pesan nih, jangan dulu mikirin cinta cintaan, fokus dulu sama tujuan kamu.
+          Kamu sadar ga kalo orang tua kamu menaruh banyak harapan ke kamu?, perjalananmu masih panjang.
+          Semangat terus ya bro🎈`;
+
+          if (i < txt.length) {
+            ketiklaki.innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(ketikkklk, speed);
+          } 
+
+          if (i === txt.length) {
+            btnlanjutlk.style.display = "block";
+          }
+        };
+
+        // FUNGSI UNTUK CW
+        function ketikkkcw() {
+          var name = document.getElementById("nama").value;
+          var txtt = `Selamat ulang tahun `+ name +`,
+          semoga sehat selalu, panjang umur, dan dilimpahkan rezekinya.
+          aku punya saran, jangan terlalu deket sama cowo ya, kamu harus jaga diri.
+          Semangat terus ya🎈`;
+
+          if (j < txtt.length) {
+            ketikcw.innerHTML += txtt.charAt(j); // Memperbaiki id menjadi ketiklkWanita
+            j++;
+            setTimeout(ketikkkcw, speed);
+          }
+
+          if (j === txtt.length) {
+            btnlanjutcw.style.display = "block";
+          }
+        }
+        function lanjut_wa(){
+
+          pop2cw.style.display = "none";
+          pop2lk.style.display = "none"
+
+          window.location.href = 'https://api.whatsapp.com/send?phone=&text=Terima%20kasih%20banyakk%20yaa'
+          console.log("harusny sih ke redirect")
+        }
+
+      </script>
+</body>
+</html>

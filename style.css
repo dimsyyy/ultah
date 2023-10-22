@@ -1,0 +1,214 @@
+html,
+body,
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    background-image: url(asset/img/bg.jpg);
+    font-family: 'Quicksand', sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.wrapper1 {
+    display: block;
+    width: 16%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20%;
+    background-color: transparent;
+}
+
+.btn-play {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 0px 14px rgba(255, 255, 255, 0.616);
+
+
+}
+
+.btn-play:hover {
+    transform: scale(0.9);
+}
+
+.elm-surat .surat {
+    font-size: smaller;
+    text-align: justify;
+    color: whitesmoke;
+    text-align: center;
+
+}
+
+.popup1 {
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    padding: 9% 9% 5% 9%;
+    width: 48%;
+    margin-bottom: 2%;
+    margin-top: 20%;
+    border-radius: 10px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.301);
+    animation-name: scaleFade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    will-change: transform;
+
+}
+
+.popup2lk {
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    padding: 9% 9% 5% 9%;
+    width: 60%;
+    margin-bottom: 2%;
+    margin-top: 20%;
+    border-radius: 10px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.301);
+    animation-name: scaleFade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    will-change: transform;
+    text-align: center;
+
+}
+
+.popup2lk .ketik {
+    font-size: small;
+}
+
+.popup2cw {
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    padding: 9% 9% 5% 9%;
+    width: 60%;
+    margin-bottom: 2%;
+    margin-top: 20%;
+    border-radius: 10px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.301);
+    animation-name: scaleFade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    will-change: transform;
+    text-align: center;
+
+}
+
+.popup2cw .ketik {
+    font-size: small;
+}
+
+@keyframes scaleFade {
+    from {
+        transform: scale(0) translateZ(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) translateZ(0);
+        opacity: 1;
+    }
+}
+
+.popup1 .halo,
+.halo2 {
+    font-size: smaller;
+    color: black;
+    text-align: center;
+
+}
+
+.popup1 .halo2 {
+    margin-top: 4%;
+}
+
+.popup1 .teksnama {
+    width: 100%;
+    margin-top: 5%;
+    background-color: #35505b;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Rubik';
+    padding: 2%;
+    text-align: center;
+    color: black;
+}
+
+.popup1 .lanjut-pop1 {
+    padding: 1%;
+    margin-top: 4%;
+    font-family: 'Rubik';
+    color: black;
+    box-shadow: 0 0 9px rgba(255, 255, 255, 0.301);
+
+}
+
+.div-wa {
+    margin-top: 4%;
+    display: none;
+    animation-name: scaleFade;
+    animation-duration: 1s;
+}
+::placeholder {
+    color: black;
+}
+
+.jekel {
+    display: flex;
+    flex-direction: row;
+    padding: 5% 2%;
+
+}
+
+.jekel label img {
+    width: 60%;
+    border-radius: 50%;
+    /* border: 2px solid gray; */
+}
+
+.jekel label input {
+    /* Menyembunyikan radio button */
+    visibility: hidden;
+    position: absolute;
+}
+
+.jekel label input+img {
+    /* style gambar */
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.jekel label input:checked+img {
+    border: 2px solid rgba(0, 102, 255, 0.733);
+}
+
+.lanjut {
+    padding: 1%;
+    margin-top: 4%;
+    font-family: 'Rubik';
+    color: black;
+}
